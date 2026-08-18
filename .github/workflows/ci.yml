@@ -6,6 +6,12 @@ on:
   pull_request:
     branches:
       - main
+  workflow_dispatch:
+    inputs:
+      redeploy_only:
+          description: 'Skip build, redeploy last image'
+          type: boolean
+          default: false
 
 env:
   IMAGE_NAME: orderservice
