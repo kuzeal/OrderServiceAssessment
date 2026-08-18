@@ -62,7 +62,7 @@ jobs:
   
   push:
     needs: docker-build-and-scan
-    # if: github.ref == 'ref/changeCi' && !inputs.redeploy_only
+    if: github.ref == 'refs/heads/main' && !inputs.redeploy_only
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -72,7 +72,7 @@ jobs:
 
   deploy:
     needs: push
-    # if: always() && (github.ref == 'refs/changeCi' || inputs.redeploy_only)
+    if: always() && (github.ref == 'refs/heads/main' || inputs.redeploy_only)
     runs-on: ubuntu-latest
     steps:
       - run: echo "${{ secrets.GHCR_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin 
