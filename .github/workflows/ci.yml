@@ -1,4 +1,4 @@
-name: GitHub Workflow Assessment CI
+name: GitHub Workflows Assessment CI
 on:
   push:
     branches:
