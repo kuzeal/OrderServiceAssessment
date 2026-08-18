@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/katie/Documents/ThreatLockerAssessment/Assessment/OrderService/OrderService.csproj": {}
+    "/home/katie/Documents/ThreatLockerAssessment/OrderServiceAssessment/OrderService.csproj": {}
   },
   "projects": {
-    "/home/katie/Documents/ThreatLockerAssessment/Assessment/OrderService/OrderService.csproj": {
+    "/home/katie/Documents/ThreatLockerAssessment/OrderServiceAssessment/OrderService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/katie/Documents/ThreatLockerAssessment/Assessment/OrderService/OrderService.csproj",
+        "projectUniqueName": "/home/katie/Documents/ThreatLockerAssessment/OrderServiceAssessment/OrderService.csproj",
         "projectName": "OrderService",
-        "projectPath": "/home/katie/Documents/ThreatLockerAssessment/Assessment/OrderService/OrderService.csproj",
+        "projectPath": "/home/katie/Documents/ThreatLockerAssessment/OrderServiceAssessment/OrderService.csproj",
         "packagesPath": "/home/katie/.nuget/packages/",
-        "outputPath": "/home/katie/Documents/ThreatLockerAssessment/Assessment/OrderService/obj/",
+        "outputPath": "/home/katie/Documents/ThreatLockerAssessment/OrderServiceAssessment/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/katie/.nuget/NuGet/NuGet.Config"
