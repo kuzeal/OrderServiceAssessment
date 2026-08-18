@@ -9,7 +9,7 @@ on:
 
 env:
   IMAGE_NAME: orderservice
-  REGISTRY: https://github.com/kuzeal/Assessment
+  REGISTRY: https://github.com/kuzeal//OrderServiceAssessment
 
 jobs:
   format-and-test:
