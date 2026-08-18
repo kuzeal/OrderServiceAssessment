@@ -33,7 +33,6 @@ jobs:
         with:
           path: ~/.nuget/packages
           key: nuget-${{ hashFiles('**/*.csproj')}}
-      - run: echo "${{ github.ref }}"
       - run: dotnet format --verify-no-changes
       - run: dotnet build -c Release
       - run: dotnet test
