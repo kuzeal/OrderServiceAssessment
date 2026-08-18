@@ -85,7 +85,7 @@ jobs:
           $REGISTRY/$IMAGE_NAME:$GITHUB_SHA
           
           for i in {1..30}; do
-            if curl --fail http://localhost:8080/weatherforecast; then
+            if curl --fail http://localhost:8080/version; then
               exit 0
             fi
 
