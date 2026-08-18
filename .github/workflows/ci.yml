@@ -82,10 +82,16 @@ jobs:
           -p 8080:8080 \
           -e APP_VERSION=$GITHUB_SHA \
           $REGISTRY/$IMAGE_NAME:$GITHUB_SHA
-      - run: |
-          docker ps
+          
+          for i in {1..30}; do
+            if curl --fail http://localhost:8080/version; then
+              exit 0
+            fi
+
+            echo "Waiting for application to start..."
+            sleep 2
+          done
+
+          echo "Application failed to become ready"
           docker logs orderservice-prod
-          sleep 15s
-          docker ps
-          docker logs orderservice-prod
-          curl -v http://localhost:8080/version
+          exit 1
