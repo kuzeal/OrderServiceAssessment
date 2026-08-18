@@ -85,4 +85,7 @@ jobs:
       - run: |
           docker ps
           docker logs orderservice-prod
+          sleep 15s
+          docker ps
+          docker logs orderservice-prod
           curl -v http://localhost:8080/version
