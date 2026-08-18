@@ -9,7 +9,7 @@ on:
 
 env:
   IMAGE_NAME: orderservice
-  REGISTRY: ghcr.io/kuzeal/orderservice:local
+  REGISTRY: ghcr.io/kuzeal
 
 jobs:
   format-and-test:
@@ -27,8 +27,8 @@ jobs:
       with:
         path: ~/.nuget/packages
         key: nuget-${{ hashFiles('**/*.csproj')}}
-    - run: dotnet format --verify-no-changes
-    - run: dotnet format build -c Release
-    - run: dotnet test
-    - run: dotnet list package --vulnerable --include-transitive
+    - run: dotnet format OrderService --verify-no-changes
+    - run: dotnet build OrderService -c Release
+    - run: dotnet test OrderService
+    - run: dotnet list OrderService package --vulnerable --include-transitive
 
