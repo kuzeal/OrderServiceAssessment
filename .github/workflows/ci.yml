@@ -50,7 +50,7 @@ jobs:
           context: .
           tags: ${{ env.IMAGE_NAME }}:${{ github.sha }}
           load: true
-          cache-from: type-gha
+          cache-from: type=gha
           cache-to: type=gha,mode=max
       - uses: aquasecurity/trivy-action@master
         with:
