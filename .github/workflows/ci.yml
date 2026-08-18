@@ -27,10 +27,10 @@ jobs:
       with:
         path: ~/.nuget/packages
         key: nuget-${{ hashFiles('**/*.csproj')}}
-    - run: dotnet format OrderService --verify-no-changes
-    - run: dotnet build OrderService -c Release
-    - run: dotnet test OrderService
-    - run: dotnet list OrderService package --vulnerable --include-transitive
+    - run: dotnet format --verify-no-changes
+    - run: dotnet build -c Release
+    - run: dotnet test
+    - run: dotnet list package --vulnerable --include-transitive
 
   docker-build-and-scan:
     if: ${{ !inputs.redeploy_only }}
